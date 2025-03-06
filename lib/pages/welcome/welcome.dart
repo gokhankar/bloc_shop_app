@@ -36,7 +36,6 @@ class _WelcomeState extends State<Welcome> {
                       //debugPrint(state.pageIndex.toString());
                     },
                     children: [
-                      Container(),
                       _tabComponent(
                         0,
                         "Buy good Applications",
