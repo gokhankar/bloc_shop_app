@@ -36,27 +36,27 @@ class _WelcomeState extends State<Welcome> {
                       //debugPrint(state.pageIndex.toString());
                     },
                     children: [
-                      Container(),
+
                       _tabComponent(
                         0,
                         "Buy good Applications",
                         "We build really good application for every specific firm",
                         "next",
-                        "path",
+                        "assets/images/reading.png",
                       ),
                       _tabComponent(
                         1,
                         "You will love it",
                         "To have a lovely and really competitive applications",
                         "next",
-                        "path",
+                        "assets/images/boy.png",
                       ),
                       _tabComponent(
                         1,
                         "Connect with us",
                         "Lets start to have together and work with",
                         "lets get started",
-                        "path",
+                        "assets/images/man.png",
                       ),
                     ],
                   ),
@@ -72,7 +72,7 @@ class _WelcomeState extends State<Welcome> {
                         color: Colors.grey,
                         activeColor: Colors.blue,
                         size: const Size.square(8),
-                        activeSize: const Size(10, 8),
+                        activeSize: const Size(16, 8),
                         activeShape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5),
                         ),
@@ -97,7 +97,7 @@ class _WelcomeState extends State<Welcome> {
   ) {
     return Column(
       children: [
-        SizedBox(width: 345.w, height: 345.w, child: Text("Image1")),
+        SizedBox(width: 345.w, height: 345.w, child: Image.asset(assetPath)),
         Text(
           title,
           style: TextStyle(
