@@ -1,3 +1,4 @@
+import 'package:bloc_shop_app/pages/signin/signin.dart';
 import 'package:bloc_shop_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:bloc_shop_app/pages/welcome/welcome.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,17 @@ class MyApp extends StatelessWidget {
         child: ScreenUtilInit(
           builder: (context, child) => MaterialApp(
             //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              appBarTheme: AppBarTheme(
+                elevation: 0,
+                backgroundColor: Colors.white
+              )
+            ),
             home:  Welcome(),
             routes: {
-              "myHomePage":(context)=>MyHomePage()
+              "myHomePage":(context)=>MyHomePage(),
+              "signin":(context)=>SignIn(),
             },
           ),
         ));
