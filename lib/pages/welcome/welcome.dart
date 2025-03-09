@@ -1,5 +1,5 @@
 //import 'package:flutter/cupertino.dart';
-import 'package:bloc_shop_app/main.dart';
+//import 'package:bloc_shop_app/main.dart';
 import 'package:bloc_shop_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:bloc_shop_app/pages/welcome/bloc/welcome_events.dart';
 import 'package:dots_indicator/dots_indicator.dart';
@@ -128,7 +128,6 @@ class _WelcomeState extends State<Welcome> {
         ),
         GestureDetector(
           onTap: () {
-            print(index);
             //index 0-2
             if (index < 3) {
               //animation
@@ -139,7 +138,9 @@ class _WelcomeState extends State<Welcome> {
               );
             } else {
               //go to next page
-Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyHomePage()));
+              //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyHomePage()));
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil("myHomePage", (route) => false);
             }
           },
           child: Container(

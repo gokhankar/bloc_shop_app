@@ -20,9 +20,12 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: ScreenUtilInit(
-          builder: (context, child) => const MaterialApp(
+          builder: (context, child) => MaterialApp(
             //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-            home: Welcome(),
+            home:  Welcome(),
+            routes: {
+              "myHomePage":(context)=>MyHomePage()
+            },
           ),
         ));
   }
