@@ -1,3 +1,4 @@
+import 'package:bloc_shop_app/pages/signin/signin_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,6 +30,14 @@ class _SignInState extends State<SignIn> {
               fontWeight: FontWeight.normal
             ),),
           ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              buildThirdPartyLogin(context),
+
+            ],
+          ),
+        ),
       )),
     );
   }
