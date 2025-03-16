@@ -1,5 +1,6 @@
 //import 'package:flutter/cupertino.dart';
 //import 'package:bloc_shop_app/main.dart';
+import 'package:bloc_shop_app/common/values/colors.dart';
 import 'package:bloc_shop_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:bloc_shop_app/pages/welcome/bloc/welcome_events.dart';
 import 'package:dots_indicator/dots_indicator.dart';
@@ -69,8 +70,8 @@ class _WelcomeState extends State<Welcome> {
                       dotsCount: 3,
                       mainAxisAlignment: MainAxisAlignment.center,
                       decorator: DotsDecorator(
-                        color: Colors.grey,
-                        activeColor: Colors.blue,
+                        color: AppColors.primaryThirdElementText,
+                        activeColor: AppColors.primaryElement,
                         size: const Size.square(8),
                         activeSize: const Size(16, 8),
                         activeShape: RoundedRectangleBorder(
@@ -107,12 +108,12 @@ class _WelcomeState extends State<Welcome> {
         Text(
           title,
           style: TextStyle(
-            color: Colors.black,
+            color: AppColors.primaryText,
             fontSize: 24.sp,
             fontWeight: FontWeight.normal,
           ),
         ),
-        //SizedBox(height: 10.h,),
+        SizedBox(height: 10.h,),
         Container(
           width: 375.w,
           padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -120,7 +121,7 @@ class _WelcomeState extends State<Welcome> {
             subTitle,
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.black.withAlpha(100),
+              color: AppColors.primarySecondaryElementText,
               fontSize: 14.sp,
               fontWeight: FontWeight.normal,
             ),
@@ -148,7 +149,7 @@ class _WelcomeState extends State<Welcome> {
             width: 325.w,
             height: 50.h,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: AppColors.primaryElement,
               borderRadius: BorderRadius.circular(15.w),
               boxShadow: [
                 BoxShadow(

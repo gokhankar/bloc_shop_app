@@ -5,7 +5,7 @@ import '../../common/values/colors.dart';
 
 Widget buildThirdPartyLogin(BuildContext context) {
   return Container(
-    margin: EdgeInsets.symmetric(vertical: 30.h),
+    margin: EdgeInsets.symmetric(vertical: 30.h, horizontal: 25.w),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -57,7 +57,7 @@ Widget buildTextField(String hintText, String textType, String iconName) {
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
-        border: Border.all(color: AppColors.primaryFourElementText)),
+        border: Border.all(color: AppColors.primaryFourthElementText)),
     child: Row(
       children: [
         Container(
@@ -152,7 +152,7 @@ Widget buildLogInAndRegButton(String buttonName, String buttonType) {
               border: Border.all(
                   color: buttonType == "login"
                       ? Colors.transparent
-                      : AppColors.primaryFourElementText)),
+                      : AppColors.primaryFourthElementText)),
           child: Center(
               child: Text(
             buttonName,
